@@ -2,7 +2,7 @@
 
 ## Simple react application that creates Stripe connected accounts
 
-![design diagram](https://drive.google.com/file/d/1CV6sNNDSxzbiBcdXAfAWNX6_YHFs8YyT/view?usp=sharing)
+![design diagram](/Stripe.drawio.png)
 
 ### Get started:
 

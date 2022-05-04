@@ -6,7 +6,7 @@
 
 ### Get started:
 
-1. Add the .env file
+1. Add the .env file with required variables, refer to the sample.env file
 2. Run `npm init` in this directory
 3. Run `npm start` to start the server
 4. `cd client`

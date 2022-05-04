@@ -10,17 +10,26 @@ app.use(express.urlencoded({ extended: true }))
 
 app.post('/createConnectedAccount', async (req, res) => {
   const params = req.body
+  let statusCode, response 
   console.log(params)
-  const account = await stripe.accounts.create({
-    type: params.type,
-    country: params.country,
-    email: params.email,
-    // capabilities: {
-    //   card_payments: {requested: true},
-    //   transfers: {requested: true},
-    // },
-  });
-  res.send(account.id)
+  try {
+    const account = await stripe.accounts.create({
+      type: params.type,
+      country: params.country,
+      email: params.email,
+      // capabilities: {
+      //   card_payments: {requested: true},
+      //   transfers: {requested: true},
+      // },
+    })
+    statusCode = 200
+    response = {accountId: account.id}
+  } catch(e) { 
+    console.log(e)
+    statusCode = e.statusCode
+    response = {error: e.raw.message}
+  }
+  res.status(statusCode).send(response)
 })
 
 app.listen(port, () => {

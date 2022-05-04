@@ -7,10 +7,10 @@
 ### Get started:
 
 1. Add the .env file with required variables, refer to the sample.env file
-2. Run `npm init` in this directory
+2. Run `npm install` in this directory
 3. Run `npm start` to start the server
 4. `cd client`
-5. Run `npm init` in the client directory(React app)
+5. Run `npm install` in the client directory(React app)
 6. Run the react app using `npm start` on the client directory
 
 ## About me:
